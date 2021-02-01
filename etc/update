@@ -1,0 +1,69 @@
+#!/bin/sh
+
+## System
+echo '>> Updating base system patches'
+doas syspatch
+
+echo '>> Updating system firmware'
+doas fw_update
+
+echo '>> Updating packages'
+doas pkg_add -u
+
+echo '>> Removing orphaned packages'
+manual=$(mktemp)
+leaves=$(mktemp)
+trap -- "rm -f $manual $leaves" EXIT INT KILL
+while :
+do
+	(
+		pkg_info -mz | sort -u > $manual
+		pkg_info -tz | sort -u > $leaves
+		set -- $(diff $manual $leaves | sed -n 's/> //p')
+		[ $# -eq 0 ] && exit 1
+		doas pkg_delete "$@"
+	) || break
+done
+rm -f $manual $leaves
+trap -- - EXIT INT KILL
+
+echo '>> Updating package list'
+list=~/etc/packages.list
+pkg_info -mz | sort -u > $list{new}
+cmp -s $list{new} $list || mv -f $list{new} $list
+rm -f $list{new}
+
+## Rust
+if which rustup > /dev/null 2>&1
+then
+	echo '>> Updating rust'
+	rustup update
+fi
+
+## Python
+python=$(which python python3 python2 2> /dev/null | head -1)
+if [ -n "$python" ]
+then
+	if ! $python -m pip --version > /dev/null 2>&1
+	then
+		echo '>> Installing pip'
+		$python -m ensurepip --user --default-pip
+	fi
+
+	echo '>> Updating pip'
+	$python -m pip install --user --upgrade pip
+
+	echo '>> Updating Python packages'
+	$python -m pip list --format freeze --not-required \
+	| sed 's/==.*//' | grep -Fvx pip | sort -u \
+	| xargs -r $python -m pip install --user --upgrade
+fi
+
+## Other
+if [ -d "$0.d" ]
+then
+	for f in "$0.d"/*.sh
+	do
+		[ -r "$f" -a -x "$f" ] && . "$f"
+	done
+fi

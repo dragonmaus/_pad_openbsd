@@ -1,0 +1,15 @@
+*-
+/.Xauthority
+/.cache/
+/.cargo/
+/.gnupg/
+/.hack/
+/.history
+/.local/
+/.ssh/
+/.xsession-*
+/bin/
+/desk/
+/mbox
+/src/
+/tmp/
