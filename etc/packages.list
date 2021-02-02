@@ -16,6 +16,8 @@ pstree--
 python--%3.8
 quirks--
 rsync--
+rust-clippy--
+rust-rustfmt--
 syncthing--
 xautolock--
 xbanish--
