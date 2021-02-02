@@ -2,6 +2,9 @@ GraphicsMagick--
 calc--
 cmark--
 dash--static
+dmenu-custom--
+dstat-custom--
+dwm-custom--
 fantasque-sans--
 feh--
 git--
@@ -15,9 +18,14 @@ pkglocatedb--
 pstree--
 python--%3.8
 quirks--
+redshift-console--
 rsync--
 rust-clippy--
 rust-rustfmt--
+slock-custom--
+st-custom--
+stagit--
+stagit-gopher--
 syncthing--
 xautolock--
 xbanish--
