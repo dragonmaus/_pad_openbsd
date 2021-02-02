@@ -33,5 +33,6 @@ HACKDIR=~/.hack
 LESS=Ri
 LESSHISTFILE=-
 PYTHONUSERBASE=~/.local/python
+RIPGREP_CONFIG_PATH=~/.config/ripgrep.conf
 
 set +a
