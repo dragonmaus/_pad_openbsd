@@ -21,6 +21,7 @@ pstree--
 python--%3.8
 quirks--
 redshift-console--
+reposync--
 rsync--
 rust-clippy--
 rust-rustfmt--
