@@ -1,6 +1,7 @@
 GraphicsMagick--
 bgs--
 calc--
+clisp--
 cmark--
 dash--static
 dmenu-custom--
@@ -12,10 +13,12 @@ geomyidae--
 gforth--
 git--
 gnupg--%gnupg2
+janet--
 jq--
 keepassxc--
 libqrencode--
 lynx--
+nasm--
 p7zip-rar--
 password-store--
 pkglocatedb--
