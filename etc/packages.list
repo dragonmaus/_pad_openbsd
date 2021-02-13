@@ -8,10 +8,10 @@ dstat-custom--
 dwm-custom--
 fantasque-sans--
 feh--
-geomyidae--
 gforth--
 git--
 gnupg--%gnupg2
+gophernicus--
 janet--
 jq--
 keepassxc--
@@ -32,8 +32,6 @@ rust-clippy--
 rust-rustfmt--
 slock-custom--
 st-custom--
-stagit--
-stagit-gopher--
 syncthing--
 xautolock--
 xbanish--
