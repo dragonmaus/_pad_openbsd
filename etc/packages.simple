@@ -1,13 +1,10 @@
 calc
-clisp
-cmark
 dash
 dmenu-custom
 dstat-custom
 dwm-custom
 fantasque-sans
 feh
-gforth
 git
 gnupg
 gophernicus
@@ -18,7 +15,6 @@ keepassxc
 lagrange
 libqrencode
 lynx
-nasm
 p7zip-rar
 password-store
 pkglocatedb
@@ -29,6 +25,7 @@ quirks
 redshift-console
 reposync
 rsync
+rust
 rust-clippy
 rust-rustfmt
 slock-custom
