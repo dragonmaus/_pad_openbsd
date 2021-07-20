@@ -1,0 +1,12 @@
+#!/bin/sh
+
+#sleep $(( 10 + (RANDOM % 60) ))
+
+u=$(< ~/etc/secret/dns-update.uri)
+t=$(mktemp -t update-dns.XXXXXXXXXX)
+trap "rm -f '$t'" EXIT KILL INT
+
+curl -Lks "$u" | tee "$t"
+
+grep -qx '^No IP change detected for .*, skipping update$' "$t"
+exit $?
