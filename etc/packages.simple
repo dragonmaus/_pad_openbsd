@@ -32,6 +32,7 @@ rust-rustfmt
 slock-custom
 st-custom
 syncthing
+texlive_base
 xautolock
 xbanish
 xclip
