@@ -5,7 +5,7 @@
 path=
 ifs=$IFS
 IFS=:
-for d in ~/bin ~/sbin ~/.cargo/bin ~/.local/bin ~/.local/python/bin $PATH
+for d in ~/bin ~/sbin ~/.cargo/bin ~/.local/bin ~/.local/python/bin ~/go/bin $PATH
 do
 	d=$(readlink -f $d 2> /dev/null || echo $d)
 	case ":$path:" in
