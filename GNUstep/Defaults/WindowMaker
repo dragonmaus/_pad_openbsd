@@ -1,0 +1,19 @@
+{
+  IconPath = (
+    "/home/dragon/GNUstep/Library/Icons",
+    "/home/dragon/GNUstep/Library/WindowMaker/Pixmaps",
+    "/home/dragon/GNUstep/Library/WindowMaker/CachedPixmaps",
+    "/usr/local/share/WindowMaker/Icons",
+    "/usr/local/share/WindowMaker/Pixmaps"
+  );
+  MiniPreviewSize = 512;
+  EnforceIconMargin = NO;
+  PixmapPath = (
+    "/home/dragon/GNUstep/Library/WindowMaker/Pixmaps",
+    "/home/dragon/GNUstep/Library/WindowMaker/Backgrounds",
+    "/home/dragon/GNUstep/Library/WindowMaker/CachedPixmaps",
+    "/usr/local/share/WindowMaker/Pixmaps",
+    "/usr/local/share/WindowMaker/Backgrounds"
+  );
+  AutoArrangeIcons = YES;
+}

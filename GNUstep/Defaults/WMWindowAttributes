@@ -1,0 +1,8 @@
+{
+  soffice.Soffice = {
+    Icon = soffice.Soffice.xpm;
+  };
+  keepassxc.KeePassXC = {
+    Icon = keepassxc.KeePassXC.xpm;
+  };
+}

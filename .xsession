@@ -29,5 +29,4 @@ xset dpms 300 600 900
 xset s off
 
 # Start window manager
-dstat iwn0 > /dev/null &
-exec dwm
+exec wmaker
